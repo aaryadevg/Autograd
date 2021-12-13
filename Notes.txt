@@ -1,0 +1,39 @@
+import Autograd; 
+
+int main(String[] args) {
+	Variable a = new Variable(45);
+	b = Autograd.add(a, new Variable(3));
+	b.backward();
+}
+
+-----------------------------------------------
+
+b.backward() -> b.backwardOp.backward() -> [input.backward() for input in inputs]
+
+-----------------------------------------------
+
+Variable
+----------------------------------------------
+ - value        : double
+ - grad         : double
+ - backwardOp   : Operation
+ - requiresGrad : bool
+
+ + getValue
+ + setValue
+ + getGrad
+ + setGrad
+ + getRequiresGrad
+ + toString
+ + backward
+
+Operation (Base for all operations + - * / and trig, exponential, log functions) implements Opratable
+---------------------------------------------
+ - inputs       : ArrayList<Variable>
+ + forward      (Implemented by base classes)
+ + backward     (Implemented by base classes)
+
+Operatable Interface
+--------------------------------------------
+ + forward
+ + backward

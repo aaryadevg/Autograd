@@ -67,4 +67,11 @@ public class Operations {
 		return new Log10Operation(inputs).forward();
 	}
 	
+	public static Variable pow(Variable a, Variable b) {
+		ArrayList<Variable> inputs = new ArrayList<Variable>(2);
+		inputs.add(a);
+		inputs.add(b);
+
+		return new PowOperation(inputs).forward();
+	}
 }

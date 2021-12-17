@@ -103,7 +103,20 @@ public class OperationsTest {
 
 		assertEquals("db/da = 1", 0.43429, a.getGrad(), 0.0001);
 	}
+	@Test
+	public void powTest() {
+		Variable a = new Variable(1.0, true);
+		Variable b = new Variable(1.0, true);
 
+		Variable c = Operations.pow(a,b);
+
+		assertEquals("1^1 = 1", 1.0, c.getValue(), 0);
+		
+		c.backward(1.0);
+
+		assertEquals("dc/da = 1", 1.0, a.getGrad(), 0);
+		assertEquals("dc/db = 0", 0.0, b.getGrad(), 0);
+	}
 
 	@Test
 	public void multiOP() {

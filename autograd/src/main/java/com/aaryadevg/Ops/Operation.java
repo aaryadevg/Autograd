@@ -8,7 +8,7 @@ public abstract class Operation implements Operatable {
 	private boolean childReqGrad;
 	
 	public Operation(ArrayList<Variable>inputs, int expectedSz) {
-		if (inputs.size() != 2) {
+		if (inputs.size() != expectedSz) {
 			throw new AutogradException("Invalid input size for operation");
 		}
 		else {

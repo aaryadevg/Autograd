@@ -52,5 +52,19 @@ public class Operations {
 		
 		return new ExponentialOperation(inputs).forward();
 	}
+
+	public static Variable ln(Variable a) {
+		ArrayList<Variable> inputs = new ArrayList<Variable>(1);
+		inputs.add(a);
+
+		return new LnOperation(inputs).forward();
+	}
+
+	public static Variable log10(Variable a) {
+		ArrayList<Variable> inputs = new ArrayList<Variable>(1);
+		inputs.add(a);
+
+		return new Log10Operation(inputs).forward();
+	}
 	
 }

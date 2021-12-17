@@ -69,6 +69,43 @@ public class OperationsTest {
 	}
 
 	@Test
+	public void exponentiation() {
+		Variable a = new Variable(2.0, true);
+		Variable b = Operations.exp(a);
+		
+		assertEquals("e^2 = 7.3890560989306495", 7.3890560989306495, b.getValue(), 0.0001); // floating point errors can happen here
+
+		b.backward(1.0);
+
+		assertEquals("derivate of e^x is itself", 7.3890560989306495, a.getGrad(), 0.0001); // floating point errors can happen here
+	}
+
+	@Test
+	public void naturalLogTest() {
+		Variable a = new Variable(1.0, true);
+		Variable b = Operations.ln(a);
+
+		assertEquals("ln(1) = 0", 0.0, b.getValue(), 0);
+
+		b.backward(1.0);
+
+		assertEquals("db/da = 1", 1.0, a.getGrad(), 0);
+	}
+
+	@Test
+	public void log10Test() {
+		Variable a = new Variable(1.0,true);
+		Variable b = Operations.log10(a);
+
+		assertEquals("log10(1) = 0", 0.0, b.getValue(), 0);
+
+		b.backward(1.0);
+
+		assertEquals("db/da = 1", 0.43429, a.getGrad(), 0.0001);
+	}
+
+
+	@Test
 	public void multiOP() {
 		Variable a = new Variable(3.0, true);
 		Variable b = new Variable(2.0, true);

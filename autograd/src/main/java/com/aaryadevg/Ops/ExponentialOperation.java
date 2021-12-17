@@ -18,7 +18,8 @@ public class ExponentialOperation extends Operation {
 
 	@Override
 	public void backward(double grad) {
-		if (inputs.get(0).getRequiresGrad()) { inputs.get(0).backward(grad * Math.exp(getArg(0))); }
+		double g = grad * Math.exp(getArg(0));
+		if (inputs.get(0).getRequiresGrad()) { inputs.get(0).backward(g); }
 	}
 
 }

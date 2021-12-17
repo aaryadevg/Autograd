@@ -2,6 +2,7 @@ package com.aaryadevg;
 
 import com.aaryadevg.Ops.*;
 
+// TODO: Add support for generic types
 public class Variable {
 	private double value;
 	private double grad;

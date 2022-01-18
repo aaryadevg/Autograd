@@ -1,1 +1,13 @@
-/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/App.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Ops/LnOperation.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Ops/PowOperation.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Operations.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Ops/Operatable.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Variable.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Ops/AddOperation.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Ops/SubtractOperation.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Ops/ExponentialOperation.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Ops/Operation.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Ops/MultiplyOperation.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/AutogradException.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Ops/Log10Operation.java
+/AARYADEV-STUDY/Projects/JAVA/Autograd/autograd/src/main/java/com/aaryadevg/Ops/DivideOperation.java
